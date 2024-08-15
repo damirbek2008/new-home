@@ -1,5 +1,5 @@
-let numbers = [1, 2, 4, 5,6,7 , 8, 12, 14,]
-let numbers1 =[21,341,64,865,6782465,356,82,56,856812,456,45,-346,-3426,4,-578,-58,-45,-36,-34]
+// let numbers = [1, 2, 4, 5,6,7 , 8, 12, 14,]
+// let numbers1 =[21,341,64,865,6782465,356,82,56,856812,456,45,-346,-3426,4,-578,-58,-45,-36,-34]
 
 // First challenge
 // let check = (check) => check >=0;
@@ -255,4 +255,91 @@ let numbers1 =[21,341,64,865,6782465,356,82,56,856812,456,45,-346,-3426,4,-578,-
 
 
 
+    const minNum =1;
+    const maxNum =10;
+    const answer =Math.floor(Math.random() * (maxNum-minNum+1)+ minNum)
+
+
+
+    let attemps=0;
+    let gues;
+    let running=true;
+
+    while(running){
+
+        gues =window.prompt(`Choose any Number from ${minNum} to ${maxNum}`)
+        gues=Number(gues)
+
+
+        if (isNaN(gues)){
+window.alert("Please enter a number")
+        }
+        else if(gues<minNum || gues>maxNum) {
+window.alert("Please enter valid Number")
+        }
+        else{
+            attemps++;
+            if(gues<answer){
+window.alert("Your answer is pretty low")
+}else if(gues==answer){
     
+    window.alert(`Your answer is correct.The answer was ${answer}.It took you ${attemps} attemps`)
+    running=false
+            } else {
+        window.alert("Your answer is very high")
+    
+
+            }
+            
+        }
+      
+    }
+
+    console.log(answer);
+    console.log(typeof gues)
+
+
+
+
+
+
+
+
+
+
+// -------------------------Function----------------------------------//
+
+
+
+
+
+
+
+
+    // function iseven(Number) {
+
+        // if (Number / 2 ===0){
+        //     return "It is even"
+        // }else{
+        //     return "Odd"
+        // }
+
+
+        // return Number%2===0 ? "it is a number":"is not even"
+        
+    // }
+
+    // console.log (iseven(11))
+
+
+// function isemail (email1){
+//     if (email1.includes("@")){
+// return true
+//     }else{
+//         return false
+//     }
+
+//     return (email1.includes("@")) ? true:false
+// }
+
+// console.log(isemail("damirbekgmail,com"));
